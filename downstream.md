@@ -25,7 +25,10 @@ Our main branch follows `main` from upstream, while `downstream-v2` is the branc
 3. While on the downstream-v2 branch, create and checkout a new rebase-YYYYMMDD branch where YYYYMMDD is the date representation e.g 20220307: `git checkout -b rebase-YYYYMMDD`
 4. Rebase the main branch: `git rebase main`
 5. Push the new branch to your fork: `git push origin rebase-YYYYMMDD`
-6. Create a PR from that branch to the downstream repository and downstream-v2 branch.
+6. Create a PR from that branch to the downstream repository and downstream-v2 branch. In the description of the PR indicate:
+    - New features
+    - Changes that require updates to our deployment configuration
+    - Breaking changes
 
 ## Downstream only PRs
 
