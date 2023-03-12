@@ -1,10 +1,18 @@
-# Managing the downstream fork
+# Managing downstream fork
 
 The purpose of this document is to describe the manual steps required to synchronize the downstream fork with upstream, while keeping the downstream only commits on the top of the branch.
 
-Merge commits in the downstream repository led to duplication of commits while rebasing the upstream main branch. To avoid them, we chose to use `rebase merging` policy for merging the downstream only changes.
+## Requirements
+
+1. Ability to manage downstream only changes
+2. Downstream commits always on top of the upstream commits
+3. Ability to review and run CI on the changes
+4. The process works for everyone on the team (no specific state required)
+5. Document the change? (see 6.3 below)
 
 ## Initial configuration
+
+
 
 In the most traditional case, the developer forked the upstream repository and cloned it locally. Two other remotes were added, `upstream` pointing to https://github.com/tektoncd/results and `downstream` pointing to https://github.com/openshift-pipelines/tektoncd-results. How to add those remotes is out of scope for this document. Given SSH is used for interaction with GitHub, `git remote -v` will return:
 
